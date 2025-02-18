@@ -1,1 +1,73 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+html, body {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #1c1c1c; /* Dark black background */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+}
+
+h1.title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FF5733; /* Orange accent */
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+.message {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.loader {
+    border: 5px solid #f3f3f3; /* Light gray */
+    border-top: 5px solid #FF5733; /* Orange accent */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1.5s linear infinite;
+    margin: 0 auto;
+}
+
+/* Keyframe animation for spinning loader */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1.title {
+        font-size: 2rem;
+    }
+
+    .message {
+        font-size: 1rem;
+    }
+
+    .loader {
+        width: 40px;
+        height: 40px;
+    }
+}
